@@ -29,6 +29,15 @@ const VENTURES = [
     status: "Active",
     image: "/images/youtube-feature.png",
   },
+  {
+    id: "rezonance",
+    name: "Rezonance",
+    tagline: "Offline knowledge, always ready",
+    description:
+      "A rugged phone pre-loaded with 180GB+ of offline knowledge — Wikipedia, medical guides, survival manuals, maps, and 60,000+ books. When the grid goes down, your phone doesn't become a brick.",
+    status: "Active",
+    url: "https://rezonance.bybetterhuman.com",
+  },
 ];
 
 export default function VenturesPage() {
@@ -102,10 +111,11 @@ export default function VenturesPage() {
                       {venture.description}
                     </p>
                     <a
-                      href={`/ventures/${venture.id}`}
+                      href={venture.url || `/ventures/${venture.id}`}
+                      {...(venture.url ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                       className="inline-flex items-center gap-2 text-label text-bbh-white border-brutal px-6 py-3 hover:bg-bbh-white hover:text-bbh-black transition-all duration-300"
                     >
-                      Deep Dive
+                      {venture.url ? "Visit Site" : "Deep Dive"}
                       <span className="group-hover:translate-x-1 transition-transform">
                         &rarr;
                       </span>
@@ -119,11 +129,19 @@ export default function VenturesPage() {
                     } overflow-hidden border border-glass-border`}
                   >
                     <div className="aspect-[4/3] bg-bbh-gray-800 overflow-hidden">
-                      <img
-                        src={venture.image}
-                        alt={venture.name}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                      />
+                      {venture.image ? (
+                        <img
+                          src={venture.image}
+                          alt={venture.name}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center">
+                          <span className="text-display text-3xl md:text-5xl text-bbh-gray-400 group-hover:text-bbh-red transition-colors duration-500">
+                            {venture.name}
+                          </span>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
