@@ -1,0 +1,208 @@
+import AnimatedSection from "@/components/AnimatedSection";
+import GlassCard from "@/components/GlassCard";
+import Marquee from "@/components/Marquee";
+
+export default function MentorshipPage() {
+  return (
+    <>
+      {/* ─── HERO ─── */}
+      <section className="py-32 md:py-44 px-6 md:px-10">
+        <div className="max-w-7xl mx-auto">
+          <AnimatedSection>
+            <span className="text-label text-bbh-red mb-4 block tracking-[0.3em]">
+              Mentorship Program
+            </span>
+          </AnimatedSection>
+          <AnimatedSection delay={0.2}>
+            <h1 className="text-display text-[clamp(2.5rem,8vw,7rem)] leading-[0.85] mb-8">
+              Launch your
+              <br />
+              <span className="text-editorial">brand & business</span>
+              <br />
+              in <span className="text-bbh-red">4 months.</span>
+            </h1>
+          </AnimatedSection>
+          <AnimatedSection delay={0.4}>
+            <p className="text-lg md:text-xl text-bbh-gray-300 max-w-2xl leading-relaxed font-mono">
+              A structured mentorship program that starts with discovering who you are
+              and what you can do &mdash; then we build a personal brand and business
+              plan around that. Purpose-built for the AI economy.
+            </p>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* ─── PROCESS ─── */}
+      <section className="border-y-2 border-bbh-white py-24 md:py-32 px-6 md:px-10">
+        <div className="max-w-7xl mx-auto">
+          <AnimatedSection>
+            <span className="text-label text-bbh-gray-400 mb-4 block">The Process</span>
+            <h2 className="text-display text-4xl md:text-6xl mb-16">
+              How it <span className="text-editorial">works</span>
+            </h2>
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              {
+                month: "Month 1",
+                title: "Discovery",
+                desc: "Deep-dive discovery call. We uncover who you are, your skills, your passions, and the intersection where your unique offer lives.",
+              },
+              {
+                month: "Month 2",
+                title: "Blueprint",
+                desc: "We architect your brand identity, define your offer stack, and build a comprehensive business plan tailored to your strengths.",
+              },
+              {
+                month: "Month 3",
+                title: "Build",
+                desc: "Content strategy, digital presence, and launch assets. We construct the infrastructure your brand needs to go live with impact.",
+              },
+              {
+                month: "Month 4",
+                title: "Launch",
+                desc: "Go to market. Active launch support, optimization, and the foundations for sustained growth beyond the program.",
+              },
+            ].map((phase, i) => (
+              <AnimatedSection key={phase.month} delay={i * 0.1}>
+                <div className="glass-card p-8 h-full">
+                  <span className="text-label text-bbh-red mb-3 block">
+                    {phase.month}
+                  </span>
+                  <h3 className="text-display text-2xl mb-3">{phase.title}</h3>
+                  <p className="text-sm text-bbh-gray-300 leading-relaxed font-mono">
+                    {phase.desc}
+                  </p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+
+          <AnimatedSection delay={0.5} className="mt-12 text-center">
+            <a
+              href="#apply"
+              className="inline-block bg-bbh-red px-10 py-4 text-label text-bbh-white hover:bg-bbh-white hover:text-bbh-black transition-all duration-300 border-2 border-bbh-red hover:border-bbh-white"
+            >
+              Book a Discovery Call
+            </a>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* ─── MARQUEE ─── */}
+      <Marquee text="PREPARATION" className="py-8" />
+
+      {/* ─── RESOURCES ─── */}
+      <section className="py-24 md:py-32 px-6 md:px-10">
+        <div className="max-w-7xl mx-auto">
+          <AnimatedSection>
+            <div className="text-center mb-16">
+              <span className="text-label text-bbh-gray-400 mb-4 block">
+                &mdash; Resources &mdash;
+              </span>
+              <h2 className="text-display text-4xl md:text-6xl">
+                Books & <span className="text-editorial">digital products</span>
+              </h2>
+            </div>
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <AnimatedSection delay={0.1}>
+              <div className="glass-card group p-8 text-center">
+                <div className="w-full aspect-[3/4] bg-bbh-gray-800 mb-6 flex items-center justify-center border border-glass-border overflow-hidden">
+                  <img
+                    src="/images/stoic-buddhist-code-cover.png"
+                    alt="The Stoic Buddhist Code"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <span className="text-label text-bbh-gray-400 mb-2 block">Digital Book</span>
+                <h3 className="text-display text-xl mb-2">The Stoic Buddhist Code</h3>
+                <p className="text-sm text-bbh-gray-300 font-mono">
+                  Master the intersection of ancient wisdom and modern purpose.
+                </p>
+              </div>
+            </AnimatedSection>
+            <AnimatedSection delay={0.2}>
+              <div className="glass-card p-8 text-center">
+                <div className="w-full aspect-[3/4] bg-bbh-gray-800 mb-6 flex items-center justify-center border border-glass-border">
+                  <span className="text-display text-4xl text-bbh-gray-700">02</span>
+                </div>
+                <span className="text-label text-bbh-gray-400 mb-2 block">Coming Soon</span>
+                <h3 className="text-display text-xl mb-2">AI Economy Playbook</h3>
+                <p className="text-sm text-bbh-gray-300 font-mono">
+                  Your guide to building in the age of artificial intelligence.
+                </p>
+              </div>
+            </AnimatedSection>
+            <AnimatedSection delay={0.3}>
+              <div className="glass-card p-8 text-center">
+                <div className="w-full aspect-[3/4] bg-bbh-gray-800 mb-6 flex items-center justify-center border border-glass-border">
+                  <span className="text-display text-4xl text-bbh-gray-700">03</span>
+                </div>
+                <span className="text-label text-bbh-gray-400 mb-2 block">Coming Soon</span>
+                <h3 className="text-display text-xl mb-2">Brand Launch Kit</h3>
+                <p className="text-sm text-bbh-gray-300 font-mono">
+                  Templates, frameworks, and tools to launch with clarity.
+                </p>
+              </div>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── CAREERS ─── */}
+      <section className="border-t-2 border-bbh-white py-24 md:py-32 px-6 md:px-10">
+        <div className="max-w-7xl mx-auto">
+          <AnimatedSection>
+            <span className="text-label text-bbh-gray-400 mb-4 block">
+              Join the Team
+            </span>
+            <h2 className="text-display text-4xl md:text-6xl mb-6">
+              We&apos;re <span className="text-bbh-red">hiring.</span>
+            </h2>
+            <p className="text-lg text-bbh-gray-300 max-w-2xl mb-12 font-mono">
+              We&apos;re always accepting talented people who want to work at the
+              intersection of human purpose and modern business.
+            </p>
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {[
+              {
+                role: "Sales — Unique Offers",
+                desc: "Sell purpose-driven products and services. You understand value and know how to communicate it authentically.",
+              },
+              {
+                role: "Operations",
+                desc: "Media buying, website creation, and operational excellence. Keep the machine running and the ventures shipping.",
+              },
+              {
+                role: "Marketing",
+                desc: "Creative marketers interested in promoting projects that matter. Content, campaigns, and community growth.",
+              },
+            ].map((job, i) => (
+              <AnimatedSection key={job.role} delay={i * 0.1}>
+                <GlassCard
+                  title={job.role}
+                  description={job.desc}
+                  label="Open Role"
+                >
+                  <div className="mt-6">
+                    <a
+                      href="#apply"
+                      className="text-label text-bbh-red hover:text-bbh-white transition-colors"
+                    >
+                      Apply Now &rarr;
+                    </a>
+                  </div>
+                </GlassCard>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
