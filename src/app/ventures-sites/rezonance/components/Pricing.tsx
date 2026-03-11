@@ -50,7 +50,7 @@ export default function Pricing() {
             href={process.env.NEXT_PUBLIC_STRIPE_REZONANCE_LINK || "#"}
             className="cta-button inline-block w-full max-w-sm bg-cta-red text-text-primary font-barlow font-semibold text-lg tracking-[0.15em] uppercase px-10 py-4 rounded no-underline text-center"
           >
-            ORDER NOW — $647
+            ORDER NOW — $657
           </a>
 
           <p className="font-source text-text-secondary text-sm mt-6">
