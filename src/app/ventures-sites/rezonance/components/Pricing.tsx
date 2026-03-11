@@ -20,7 +20,7 @@ export default function Pricing() {
           </h3>
 
           <div className="font-rez-mono text-accent-brass text-5xl md:text-6xl font-medium mb-8">
-            $497
+            $647
           </div>
 
           <ul className="text-left max-w-md mx-auto mb-10 space-y-3">
@@ -50,7 +50,7 @@ export default function Pricing() {
             href={process.env.NEXT_PUBLIC_STRIPE_REZONANCE_LINK || "#"}
             className="cta-button inline-block w-full max-w-sm bg-cta-red text-text-primary font-barlow font-semibold text-lg tracking-[0.15em] uppercase px-10 py-4 rounded no-underline text-center"
           >
-            ORDER NOW — $497
+            ORDER NOW — $647
           </a>
 
           <p className="font-source text-text-secondary text-sm mt-6">
