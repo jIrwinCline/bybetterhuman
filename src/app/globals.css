@@ -45,6 +45,32 @@
   --color-glass-border-strong: rgba(255, 255, 255, 0.2);
   --color-glass-red: rgba(255, 0, 52, 0.08);
   --color-glass-red-border: rgba(255, 0, 52, 0.25);
+
+  /* ─── Better Marketing venture tokens ─── */
+  --font-heading: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --font-body: "Source Sans 3", "Segoe UI", sans-serif;
+  --font-mono-bm: "JetBrains Mono", "SF Mono", monospace;
+  --font-accent: "Playfair Display", Georgia, serif;
+
+  --color-bm-cyan: #00d4ff;
+  --color-bm-cyan-dark: #00a8cc;
+  --color-bm-cyan-deeper: #007a94;
+  --color-bm-cyan-light: #e0f7fa;
+  --color-bm-cyan-50: #f0fbff;
+  --color-bm-blue-dark: #0a1628;
+  --color-bm-blue-mid: #0e3d5c;
+  --color-bm-blue-deep: #061220;
+  --color-bm-yellow: #f5d76e;
+  --color-bm-yellow-hover: #f0c94d;
+  --color-bm-white: #ffffff;
+  --color-bm-gray-50: #f8fafb;
+  --color-bm-gray-100: #e8eef2;
+  --color-bm-gray-200: #d1dce4;
+  --color-bm-gray-400: #7a8fa0;
+  --color-bm-gray-600: #445566;
+  --color-bm-gray-700: #2d3e50;
+  --color-bm-gray-900: #1a2332;
+  --color-bm-green: #22c55e;
 }
 
 /* ─── BASE ─── */

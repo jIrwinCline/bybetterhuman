@@ -1,32 +1,8 @@
 /* ─── BETTER MARKETING THEME ─── */
 /* Scoped to .better-marketing-site to avoid conflicts with BBH global styles */
 
-@theme {
-  --font-heading: "Barlow Condensed", "Arial Narrow", sans-serif;
-  --font-body: "Source Sans 3", "Segoe UI", sans-serif;
-  --font-mono-bm: "JetBrains Mono", "SF Mono", monospace;
-  --font-accent: "Playfair Display", Georgia, serif;
-
-  --color-bm-cyan: #00d4ff;
-  --color-bm-cyan-dark: #00a8cc;
-  --color-bm-cyan-deeper: #007a94;
-  --color-bm-cyan-light: #e0f7fa;
-  --color-bm-cyan-50: #f0fbff;
-  --color-bm-blue-dark: #0a1628;
-  --color-bm-blue-mid: #0e3d5c;
-  --color-bm-blue-deep: #061220;
-  --color-bm-yellow: #f5d76e;
-  --color-bm-yellow-hover: #f0c94d;
-  --color-bm-white: #ffffff;
-  --color-bm-gray-50: #f8fafb;
-  --color-bm-gray-100: #e8eef2;
-  --color-bm-gray-200: #d1dce4;
-  --color-bm-gray-400: #7a8fa0;
-  --color-bm-gray-600: #445566;
-  --color-bm-gray-700: #2d3e50;
-  --color-bm-gray-900: #1a2332;
-  --color-bm-green: #22c55e;
-}
+/* Tokens (--color-bm-*, --font-heading, etc.) live in globals.css @theme
+   so Tailwind can generate utilities like text-bm-cyan, bg-bm-blue-dark, etc. */
 
 /* ─── BASE ─── */
 .better-marketing-site {
@@ -38,6 +14,11 @@
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* Override Tailwind font-mono utility so it uses JetBrains Mono, not GT Cinetype */
+  --font-mono: "JetBrains Mono", "SF Mono", monospace;
+  /* Override body text stroke from BBH global .text-display */
+  -webkit-text-stroke-width: 0;
 }
 
 .better-marketing-site ::selection {
@@ -51,6 +32,8 @@
   font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1.05;
+  -webkit-text-stroke-width: 0;
+  -webkit-text-stroke-color: transparent;
 }
 .better-marketing-site .text-editorial {
   font-family: var(--font-accent);
@@ -170,3 +153,9 @@
   pointer-events: none;
   z-index: 9999;
 }
+
+/* ─── SCROLLBAR (override BBH global) ─── */
+.better-marketing-site ::-webkit-scrollbar { width: 6px; }
+.better-marketing-site ::-webkit-scrollbar-track { background: var(--color-bm-gray-50); }
+.better-marketing-site ::-webkit-scrollbar-thumb { background: var(--color-bm-gray-200); border-radius: 3px; }
+.better-marketing-site ::-webkit-scrollbar-thumb:hover { background: var(--color-bm-cyan); }
