@@ -1,8 +1,21 @@
+"use client";
+
+import { useEffect } from "react";
 import AnimatedSection from "@/components/AnimatedSection";
 import GlassCard from "@/components/GlassCard";
 import Marquee from "@/components/Marquee";
 
 export default function MentorshipPage() {
+  useEffect(() => {
+    const scriptSrc = "https://assets.calendly.com/assets/external/widget.js";
+    if (!document.querySelector(`script[src="${scriptSrc}"]`)) {
+      const script = document.createElement("script");
+      script.src = scriptSrc;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+  }, []);
+
   return (
     <>
       {/* ─── HERO ─── */}
@@ -79,19 +92,49 @@ export default function MentorshipPage() {
             ))}
           </div>
 
-          <AnimatedSection delay={0.5} className="mt-12 text-center">
-            <a
-              href="#apply"
-              className="inline-block bg-bbh-red px-10 py-4 text-label text-bbh-white hover:bg-bbh-white hover:text-bbh-black transition-all duration-300 border-2 border-bbh-red hover:border-bbh-white"
-            >
-              Book a Discovery Call
-            </a>
-          </AnimatedSection>
         </div>
       </section>
 
       {/* ─── MARQUEE ─── */}
       <Marquee text="PREPARATION" className="py-8" />
+
+      {/* ─── DISCOVERY CALL ─── */}
+      <section id="apply" className="py-24 md:py-32 px-6 md:px-10 border-y-2 border-bbh-white">
+        <div className="max-w-3xl mx-auto text-center">
+          <AnimatedSection>
+            <span className="text-label text-bbh-red mb-4 block tracking-[0.3em]">
+              Discovery Call
+            </span>
+            <h2 className="text-display text-4xl md:text-6xl mb-6">
+              One call. <span className="text-editorial">Total clarity.</span>
+            </h2>
+          </AnimatedSection>
+          <AnimatedSection delay={0.2}>
+            <p className="text-lg md:text-xl text-bbh-gray-300 leading-relaxed font-mono mb-6">
+              For <span className="text-bbh-white font-bold">$57</span>, you get a focused strategy session
+              where we dig into who you are, what you&apos;re building, and where the real
+              opportunity is. We&apos;ll map out exactly which business, brand, product &mdash;
+              or all three &mdash; you should be building and how to monetize it.
+            </p>
+            <p className="text-lg md:text-xl text-bbh-gray-300 leading-relaxed font-mono mb-6">
+              You walk away with a clear, actionable plan you can execute entirely on your own.
+              No upsell traps. No bait-and-switch. This is your roadmap.
+            </p>
+            <p className="text-base text-bbh-gray-400 leading-relaxed font-mono mb-12">
+              And if you decide you want help bringing it to life? Our team is ready to build it
+              with you. But that&apos;s your call &mdash; this session is designed to give you
+              everything you need to move forward with or without us.
+            </p>
+          </AnimatedSection>
+          <AnimatedSection delay={0.4}>
+            <div
+              className="calendly-inline-widget"
+              data-url="https://calendly.com/jacob-formacha/bybetterhuman-discovery"
+              style={{ minWidth: 320, height: 700 }}
+            />
+          </AnimatedSection>
+        </div>
+      </section>
 
       {/* ─── RESOURCES ─── */}
       <section className="py-24 md:py-32 px-6 md:px-10">
