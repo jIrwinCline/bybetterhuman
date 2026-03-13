@@ -1,0 +1,172 @@
+/* ─── BETTER MARKETING THEME ─── */
+/* Scoped to .better-marketing-site to avoid conflicts with BBH global styles */
+
+@theme {
+  --font-heading: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --font-body: "Source Sans 3", "Segoe UI", sans-serif;
+  --font-mono-bm: "JetBrains Mono", "SF Mono", monospace;
+  --font-accent: "Playfair Display", Georgia, serif;
+
+  --color-bm-cyan: #00d4ff;
+  --color-bm-cyan-dark: #00a8cc;
+  --color-bm-cyan-deeper: #007a94;
+  --color-bm-cyan-light: #e0f7fa;
+  --color-bm-cyan-50: #f0fbff;
+  --color-bm-blue-dark: #0a1628;
+  --color-bm-blue-mid: #0e3d5c;
+  --color-bm-blue-deep: #061220;
+  --color-bm-yellow: #f5d76e;
+  --color-bm-yellow-hover: #f0c94d;
+  --color-bm-white: #ffffff;
+  --color-bm-gray-50: #f8fafb;
+  --color-bm-gray-100: #e8eef2;
+  --color-bm-gray-200: #d1dce4;
+  --color-bm-gray-400: #7a8fa0;
+  --color-bm-gray-600: #445566;
+  --color-bm-gray-700: #2d3e50;
+  --color-bm-gray-900: #1a2332;
+  --color-bm-green: #22c55e;
+}
+
+/* ─── BASE ─── */
+.better-marketing-site {
+  font-family: var(--font-body);
+  background-color: var(--color-bm-white);
+  color: var(--color-bm-gray-900);
+  overflow-x: hidden;
+  font-weight: 400;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.better-marketing-site ::selection {
+  background: var(--color-bm-cyan);
+  color: var(--color-bm-white);
+}
+
+/* ─── TYPOGRAPHY ─── */
+.better-marketing-site .text-display {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+.better-marketing-site .text-editorial {
+  font-family: var(--font-accent);
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: -0.01em;
+}
+.better-marketing-site .text-mono {
+  font-family: var(--font-mono-bm);
+  font-weight: 500;
+}
+.better-marketing-site .text-label {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* ─── HERO GRADIENT ─── */
+.better-marketing-site .hero-gradient {
+  background: linear-gradient(180deg, var(--color-bm-blue-deep) 0%, var(--color-bm-blue-dark) 30%, var(--color-bm-blue-mid) 70%, var(--color-bm-cyan-dark) 100%);
+}
+
+/* ─── ACCENT LINE ─── */
+.better-marketing-site .accent-line {
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--color-bm-cyan), transparent);
+  width: 100%;
+}
+
+/* ─── CARDS ─── */
+.better-marketing-site .card-elevated {
+  background: var(--color-bm-white);
+  border: 1px solid var(--color-bm-gray-100);
+  border-radius: 12px;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.better-marketing-site .card-elevated:hover {
+  border-color: var(--color-bm-cyan);
+  box-shadow: 0 8px 32px rgba(0, 212, 255, 0.08);
+  transform: translateY(-2px);
+}
+
+.better-marketing-site .card-dark {
+  background: var(--color-bm-blue-dark);
+  border: 1px solid rgba(0, 212, 255, 0.15);
+  border-radius: 12px;
+  color: white;
+}
+
+/* ─── BUTTONS ─── */
+.better-marketing-site .btn-cta {
+  background-color: var(--color-bm-yellow);
+  color: var(--color-bm-gray-900);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 9999px;
+  padding: 18px 48px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  border: none;
+  display: inline-block;
+}
+.better-marketing-site .btn-cta:hover {
+  background-color: var(--color-bm-yellow-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(245, 215, 110, 0.4);
+}
+
+/* ─── STAT NUMBER ─── */
+.better-marketing-site .stat-number {
+  font-family: var(--font-mono-bm);
+  color: var(--color-bm-cyan);
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* ─── STEP ─── */
+.better-marketing-site .step-dot {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-bm-cyan), var(--color-bm-cyan-dark));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: var(--font-mono-bm);
+  font-weight: 700;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+/* ─── SCROLL REVEAL ─── */
+.better-marketing-site .scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.better-marketing-site .scroll-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── NOISE OVERLAY ─── */
+.better-marketing-site .noise::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.02'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+  pointer-events: none;
+  z-index: 9999;
+}

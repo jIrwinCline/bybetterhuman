@@ -3,6 +3,17 @@ import Marquee from "@/components/Marquee";
 
 const VENTURES = [
   {
+    id: "better-marketing",
+    name: "Better Marketing",
+    tagline: "Done-for-you ad management",
+    description:
+      "Full-service ad management for businesses ready to scale. Strategy, creative, and optimization across platforms — so you can focus on running your business while we drive the growth.",
+    status: "Active",
+    url: "https://marketing.bybetterhuman.com",
+    image: "/images/better-marketing/LogoHeader.png",
+    imageContain: true,
+  },
+  {
     id: "musi",
     name: "Musi",
     tagline: "The muse platform",
@@ -10,24 +21,6 @@ const VENTURES = [
       "A platform designed to launch muse careers and service libraries. Empowering creative ambassadors with the tools to build, manage, and monetize their artistry in the age of AI.",
     status: "Active",
     image: "/images/muse-hero.jpg",
-  },
-  {
-    id: "stoic-buddhist",
-    name: "The Stoic Buddhist",
-    tagline: "Ancient wisdom, modern purpose",
-    description:
-      "A content brand and digital product line at the intersection of Stoic philosophy and Buddhist practice. Books, courses, and community for those seeking clarity in chaos.",
-    status: "Active",
-    image: "/images/stoic-buddhist-code-cover.png",
-  },
-  {
-    id: "jacob-rising",
-    name: "Jacob Rising",
-    tagline: "Personal brand & media",
-    description:
-      "The personal brand driving the studio. YouTube content, thought leadership, and community building around purpose-driven entrepreneurship in the AI economy.",
-    status: "Active",
-    image: "/images/youtube-feature.png",
   },
   {
     id: "rezonance",
@@ -128,12 +121,12 @@ export default function VenturesPage() {
                       i % 2 === 1 ? "lg:order-1" : ""
                     } overflow-hidden border border-glass-border`}
                   >
-                    <div className="aspect-[4/3] bg-bbh-gray-800 overflow-hidden">
+                    <div className={`aspect-[4/3] overflow-hidden ${venture.imageContain ? "bg-bbh-gray-900" : "bg-bbh-gray-800"}`}>
                       {venture.image ? (
                         <img
                           src={venture.image}
                           alt={venture.name}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                          className={`w-full h-full group-hover:scale-105 transition-transform duration-700 ${venture.imageContain ? "object-contain p-8" : "object-cover"}`}
                         />
                       ) : (
                         <div className="w-full h-full flex items-center justify-center">

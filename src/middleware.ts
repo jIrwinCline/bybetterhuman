@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 const VENTURE_SUBDOMAINS: Record<string, string> = {
   rezonance: "/ventures-sites/rezonance",
-  // Add future ventures here
+  marketing: "/ventures-sites/better-marketing",
 };
 
 export function middleware(request: NextRequest) {

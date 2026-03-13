@@ -19,50 +19,6 @@ const CONCEPTS: Concept[] = [
     stage: "Active",
     internal: true,
   },
-  {
-    title: "AI Career Coach",
-    description:
-      "An AI-powered career guidance tool that helps people find purpose-aligned work in the new economy. Personalized pathing based on skills, passions, and market demand.",
-    url: "#",
-    stage: "Ideation",
-  },
-  {
-    title: "Community OS",
-    description:
-      "Operating system for purpose-driven communities. Member management, content, events, and monetization — all in one platform built for modern creators.",
-    image: "/images/muse-hero.jpg",
-    url: "#",
-    stage: "POC",
-  },
-  {
-    title: "Creator Fund",
-    description:
-      "Micro-funding model for independent creators building at the intersection of art and technology. Apply, pitch, receive support.",
-    url: "#",
-    stage: "Research",
-  },
-  {
-    title: "Prep Academy",
-    description:
-      "An educational platform teaching the skills that matter in an AI-first world. From personal branding to prompt engineering to offer creation.",
-    url: "#",
-    stage: "Ideation",
-  },
-  {
-    title: "Vessel",
-    description:
-      "A journaling and self-discovery app rooted in Stoic and Buddhist philosophy. Daily prompts, reflection tracking, and purpose alignment.",
-    url: "#",
-    stage: "Ideation",
-  },
-  {
-    title: "Collab Board",
-    description:
-      "A matchmaking tool for creators and builders. Post what you're working on, find collaborators with complementary skills, and ship together.",
-    image: "/images/youtube-feature.png",
-    url: "#",
-    stage: "Research",
-  },
 ];
 
 function ConceptCard({ concept }: { concept: Concept }) {
