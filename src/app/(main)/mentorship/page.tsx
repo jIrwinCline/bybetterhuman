@@ -1,11 +1,14 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import AnimatedSection from "@/components/AnimatedSection";
 import GlassCard from "@/components/GlassCard";
 import Marquee from "@/components/Marquee";
 
 export default function MentorshipPage() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const videoSectionRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     const scriptSrc = "https://assets.calendly.com/assets/external/widget.js";
     if (!document.querySelector(`script[src="${scriptSrc}"]`)) {
@@ -14,6 +17,17 @@ export default function MentorshipPage() {
       script.async = true;
       document.body.appendChild(script);
     }
+
+    // Slow scroll to video section, then autoplay
+    const timer = setTimeout(() => {
+      videoSectionRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+      // Start playback after scroll finishes
+      const playTimer = setTimeout(() => {
+        videoRef.current?.play();
+      }, 1200);
+      return () => clearTimeout(playTimer);
+    }, 800);
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -41,6 +55,23 @@ export default function MentorshipPage() {
               and what you can do &mdash; then we build a personal brand and business
               plan around that. Purpose-built for the AI economy.
             </p>
+          </AnimatedSection>
+          <AnimatedSection delay={0.6}>
+            <div ref={videoSectionRef} className="mt-12 max-w-4xl mx-auto">
+              <div className="relative aspect-video rounded-2xl overflow-hidden border border-glass-border shadow-2xl shadow-black/20">
+                <video
+                  ref={videoRef}
+                  className="w-full h-full object-cover"
+                  controls
+                  preload="auto"
+                  playsInline
+                  muted
+                >
+                  <source src="/videos/VSL.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
           </AnimatedSection>
         </div>
       </section>
