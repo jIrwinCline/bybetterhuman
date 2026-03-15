@@ -19,7 +19,7 @@ export default function MentorshipPage() {
   return (
     <>
       {/* ─── HERO ─── */}
-      <section className="py-32 md:py-44 px-6 md:px-10">
+      <section className="py-32 md:py-44 px-6 md:px-1 hero-bg">
         <div className="max-w-7xl mx-auto">
           <AnimatedSection>
             <span className="text-label text-bbh-red mb-4 block tracking-[0.3em]">

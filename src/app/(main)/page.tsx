@@ -70,7 +70,7 @@ export default function Home() {
       <section className="py-24 md:py-32 px-6 md:px-10">
         <div className="max-w-7xl mx-auto">
           <AnimatedSection>
-            <div className="glass-strong p-10 md:p-16 glow-red">
+            <div className="glass-main p-10 md:p-16 glow-red rounded-sm">
               <span className="text-label text-bbh-red mb-6 block">The Mission</span>
               <h2 className="text-display text-3xl md:text-5xl lg:text-6xl mb-8 max-w-4xl">
                 We call this{" "}
