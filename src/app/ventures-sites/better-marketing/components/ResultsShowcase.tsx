@@ -5,15 +5,25 @@ import { motion } from "framer-motion";
 import { caseStudies } from "../data/caseStudies";
 
 const showcaseIds = [
-  "dental-implants",
-  "roofing-leads",
-  "chiropractor-new-patients",
+  "ecom-truck-accessories",      // 39.16x ROAS
+  "ecom-fragrance",              // 29.15x ROAS
+  "ecom-medical-supply",         // 24.93x ROAS
+  "pool-company",                // 20.49x ROAS
+  "hormone-therapy-leads",       // 18.53x ROAS
+  "bathroom-remodeling-leads",   // 17.66x ROAS
+  "ecom-skincare",               // 9.35x ROAS — $1.4M
+  "plumbing-long-term",          // 8.66x ROAS — 1,752 leads
 ];
 
 const showcaseImages: Record<string, string> = {
-  "dental-implants": "/images/better-marketing/stock/medical-dental.jpg",
-  "roofing-leads": "/images/better-marketing/stock/home-roofing.jpg",
-  "chiropractor-new-patients": "/images/better-marketing/stock/medical-chiro.jpg",
+  "ecom-truck-accessories": "/images/better-marketing/stock/ecom-truck.jpg",
+  "ecom-fragrance": "/images/better-marketing/stock/ecom-fragrance.jpg",
+  "ecom-medical-supply": "/images/better-marketing/stock/ecom-medical-supply.jpg",
+  "pool-company": "/images/better-marketing/stock/pool-company.jpg",
+  "hormone-therapy-leads": "/images/better-marketing/stock/hormone-therapy.jpg",
+  "bathroom-remodeling-leads": "/images/better-marketing/stock/bathroom-remodel.jpg",
+  "ecom-skincare": "/images/better-marketing/stock/ecom-skincare.jpg",
+  "plumbing-long-term": "/images/better-marketing/stock/plumbing.jpg",
 };
 
 const showcaseCases = showcaseIds
@@ -134,8 +144,7 @@ export default function ResultsShowcase() {
             Get Results Like These
           </a>
           <p className="text-sm text-bm-gray-400 mt-4">
-            We&apos;ve run 3,000+ campaigns across 100+ industries. These are
-            just three.
+            We&apos;ve run 3,000+ campaigns across 100+ industries.
           </p>
         </motion.div>
       </div>

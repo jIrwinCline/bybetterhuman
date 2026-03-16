@@ -27,8 +27,8 @@ export default function Footer({ links = defaultLinks }: FooterProps) {
           >
             <div className="mb-2">
               <Image
-                src="/images/better-marketing/LogoHeader.png"
-                alt="Better Marketing Digital"
+                src="/images/LogoHeader.png"
+                alt="Better Digital Marketing"
                 width={160}
                 height={42}
                 className="h-8 w-auto"

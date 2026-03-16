@@ -167,11 +167,156 @@ export const caseStudies: CaseStudy[] = [
     adSpend: "$3,600/month",
     quote: "Every other agency got our account banned. These guys got us 41 consultations in a month without a single policy strike.",
   },
+  {
+    id: "ecom-truck-accessories",
+    industry: "Ecommerce",
+    businessType: "Truck Accessories Store",
+    headline: "$218,860 in Revenue at a 39.16x ROAS for a Truck Accessories Brand",
+    challenge:
+      "An online truck accessories store was running their own Meta ads with inconsistent results. Some months they'd break even, other months they'd lose money. They had no structured testing framework, no retargeting funnel, and their creative was a mix of product photos shot on an iPhone. They knew the demand was there but couldn't figure out how to scale profitably.",
+    strategy:
+      "We restructured their Meta campaigns into a proper full-funnel setup: prospecting with broad and interest-based audiences, a middle-funnel for engaged visitors, and bottom-funnel retargeting for cart abandoners. Shot new product-in-use creative showing the accessories installed on trucks. Tested price-anchoring ad copy and ran dynamic product ads for their bestselling SKUs.",
+    results: [
+      { metric: "Revenue", value: "$218,860", context: "over 5 months of campaigns" },
+      { metric: "Return on Ad Spend", value: "39.16x", context: "every $1 spent returned $39.16" },
+      { metric: "Ad Spend", value: "$8,630", context: "total spend across the study period" },
+      { metric: "Avg Monthly Revenue", value: "$43,772", context: "consistent month-over-month growth" },
+    ],
+    timeline: "5 months",
+    adSpend: "$1,726/month",
+  },
+  {
+    id: "ecom-fragrance",
+    industry: "Ecommerce",
+    businessType: "Fragrance Brand",
+    headline: "$429,590 in Revenue at 29.15x ROAS for an Online Fragrance Brand",
+    challenge:
+      "A direct-to-consumer fragrance brand had a strong product and repeat customers, but their paid advertising was barely breaking even. Their previous setup was a single campaign with no audience segmentation and generic lifestyle imagery. They were spending money but couldn't tell what was actually driving sales versus what was wasted.",
+    strategy:
+      "We segmented their campaigns by customer type: cold audiences, warm visitors, and past purchasers. Built creative around scent storytelling and unboxing moments. Launched Google Shopping campaigns for branded and non-branded fragrance searches. Set up proper attribution so every sale could be traced back to the ad that drove it. Tested multiple offers including bundles and subscription upsells.",
+    results: [
+      { metric: "Revenue", value: "$429,590", context: "over 1 year of campaigns" },
+      { metric: "Return on Ad Spend", value: "29.15x", context: "on $14,726 total ad spend" },
+      { metric: "Ad Spend", value: "$14,726", context: "total spend across all platforms" },
+      { metric: "Monthly Revenue Avg", value: "$35,799", context: "consistent profitability every month" },
+    ],
+    timeline: "1 year",
+    adSpend: "$1,227/month",
+  },
+  {
+    id: "ecom-medical-supply",
+    industry: "Ecommerce",
+    businessType: "Medical Supply Store",
+    headline: "$78,496 in Revenue at 24.93x ROAS for a Medical Supply Store",
+    challenge:
+      "An online medical supply company was competing against massive retailers like Amazon and had almost no brand recognition. They had solid margins on their products but couldn't drive traffic at a cost that made the math work. Their Google Shopping campaigns were eating budget on low-margin products with no return.",
+    strategy:
+      "We restructured their Google Shopping feed to prioritize high-margin, high-AOV products. Built segmented campaigns by product category with different bid strategies per margin tier. Launched Meta campaigns targeting healthcare professionals and facilities with bulk-buy messaging. Added search campaigns for long-tail medical supply keywords that big-box retailers weren't bidding on.",
+    results: [
+      { metric: "Revenue", value: "$78,496", context: "in 4 months of campaigns" },
+      { metric: "Return on Ad Spend", value: "24.93x", context: "on $3,148 total ad spend" },
+      { metric: "Ad Spend", value: "$3,148", context: "total spend across all platforms" },
+      { metric: "Monthly Revenue Avg", value: "$19,624", context: "from under $4K/mo pre-campaign" },
+    ],
+    timeline: "4 months",
+    adSpend: "$787/month",
+  },
+  {
+    id: "pool-company",
+    industry: "Home Services",
+    businessType: "Pool Company",
+    headline: "$790,800 in Revenue and 1,358 Leads for a Pool Installation Company",
+    challenge:
+      "A pool installation and service company had been relying on referrals and seasonal demand for years. Their competitors were aggressively running ads and showing up first in Google results. They had no digital advertising in place and were losing bids to companies that were getting to homeowners first.",
+    strategy:
+      "We launched Google Ads campaigns targeting high-intent pool installation and renovation keywords in their service area. Built dedicated landing pages for new pool builds, renovations, and weekly service. Ran Meta campaigns targeting homeowners in affluent zip codes with pool-lifestyle creative. Implemented lead tracking across phone calls, form submissions, and chat. Ran seasonal promotions timed to spring and early summer demand spikes.",
+    results: [
+      { metric: "Revenue", value: "$790,800", context: "over 2 years of campaigns" },
+      { metric: "Return on Ad Spend", value: "20.49x", context: "on $38,609 total ad spend" },
+      { metric: "Opportunities Generated", value: "1,358", context: "at $28.43 average cost per lead" },
+      { metric: "Jobs Closed", value: "10", context: "high-ticket pool installations" },
+    ],
+    timeline: "2 years",
+    adSpend: "$1,608/month",
+  },
+  {
+    id: "hormone-therapy-leads",
+    industry: "Medical",
+    businessType: "Hormone Therapy Clinic",
+    headline: "506 Patient Opportunities at $24.34 Each for a Hormone Therapy Clinic",
+    challenge:
+      "A hormone therapy clinic offering HRT and wellness programs was struggling with the same compliance issues that plague the entire hormone space. Ad platforms flag hormone-related content aggressively. Their in-house efforts had gotten their ad accounts restricted twice, and they were stuck relying on organic social that wasn't converting.",
+    strategy:
+      "We built compliant campaigns using symptom-focused and wellness-oriented messaging that passed platform review. Targeted men and women 35-60 with search campaigns around symptoms like fatigue, weight changes, and hormonal imbalance. Created educational content funnels on Meta that warmed audiences before asking for a consultation booking. Set up a symptom quiz landing page that pre-qualified leads and routed them to the right provider.",
+    results: [
+      { metric: "Revenue", value: "$228,302", context: "over 1 year of campaigns" },
+      { metric: "Return on Ad Spend", value: "18.53x", context: "on $12,317 total ad spend" },
+      { metric: "Opportunities Generated", value: "506", context: "at $24.34 average cost per lead" },
+      { metric: "Patients Closed", value: "54", context: "with avg annual patient value of $4,200+" },
+    ],
+    timeline: "1 year",
+    adSpend: "$1,026/month",
+  },
+  {
+    id: "bathroom-remodeling-leads",
+    industry: "Home Services",
+    businessType: "Bathroom Remodeling Company",
+    headline: "$302,862 in Revenue from 406 Leads for a Bathroom Remodeling Company",
+    challenge:
+      "A bathroom remodeling company was getting most of their work from HomeAdvisor and word-of-mouth. The HomeAdvisor leads were expensive, shared with competitors, and often just price shopping. They wanted their own lead pipeline with exclusive prospects who were actually ready to start a project.",
+    strategy:
+      "We launched Google Ads campaigns targeting high-intent remodeling keywords: 'bathroom remodel near me', 'shower renovation cost', 'bathroom contractor'. Built before-and-after gallery landing pages for each service type. Ran Meta retargeting to website visitors and lookalike audiences based on past customers. Added call tracking so every lead source was measurable down to the keyword.",
+    results: [
+      { metric: "Revenue", value: "$302,862", context: "in 4 months of campaigns" },
+      { metric: "Return on Ad Spend", value: "17.66x", context: "on $17,142 total ad spend" },
+      { metric: "Opportunities Generated", value: "406", context: "at $42.17 average cost per lead" },
+      { metric: "Monthly Revenue Avg", value: "$75,715", context: "consistent pipeline every month" },
+    ],
+    timeline: "4 months",
+    adSpend: "$4,285/month",
+  },
+  {
+    id: "ecom-skincare",
+    industry: "Ecommerce",
+    businessType: "Skincare Brand",
+    headline: "$1.4M in Revenue Over 3 Years for an Online Skincare Brand",
+    challenge:
+      "A DTC skincare brand had early traction from organic social and influencer partnerships, but growth had plateaued. They tried running their own Facebook ads and burned through $15K in the first two months with barely any return. They needed a structured paid acquisition strategy that could scale without killing their margins.",
+    strategy:
+      "We built a full-funnel Meta campaign structure: top-of-funnel video ads with skincare routine content, mid-funnel testimonials and before-and-after creative, and bottom-funnel dynamic product ads for cart abandoners. Launched Google Shopping and branded search campaigns. Tested subscription offers vs. one-time purchases. Continuously refreshed creative every 4-6 weeks to combat ad fatigue.",
+    results: [
+      { metric: "Revenue", value: "$1,434,168", context: "over 3 years of campaigns" },
+      { metric: "Return on Ad Spend", value: "9.35x", context: "on $153,433 total ad spend" },
+      { metric: "Ad Spend", value: "$153,433", context: "scaled spend as ROAS held" },
+      { metric: "Monthly Revenue Avg", value: "$39,838", context: "from $8K/mo pre-campaign" },
+    ],
+    timeline: "3 years",
+    adSpend: "$4,262/month",
+  },
+  {
+    id: "plumbing-long-term",
+    industry: "Home Services",
+    businessType: "Plumbing Company",
+    headline: "1,752 Service Calls at $15.41 Each Over 4 Years for a Plumbing Company",
+    challenge:
+      "A plumbing company wanted to stop relying on word-of-mouth and build a consistent, predictable pipeline of service calls. They had tried running Google Ads themselves but didn't know how to structure campaigns, track calls, or optimize bids. They were spending $800/month with no idea if it was working.",
+    strategy:
+      "We rebuilt their Google Ads from scratch with tight keyword groups for each service: emergency plumbing, drain cleaning, water heater repair, and repiping. Set up call tracking with recorded calls so the owner could monitor lead quality. Built fast-loading landing pages with click-to-call for mobile. Added Meta campaigns for seasonal promotions and retargeting. Optimized continuously over 4 years, scaling spend as the business grew.",
+    results: [
+      { metric: "Revenue", value: "$245,528", context: "over 4 years of campaigns" },
+      { metric: "Return on Ad Spend", value: "8.66x", context: "on $28,363 total ad spend" },
+      { metric: "Opportunities Generated", value: "1,752", context: "at $15.41 average cost per lead" },
+      { metric: "Jobs Closed", value: "271", context: "verified closed from ad-generated calls" },
+    ],
+    timeline: "4 years",
+    adSpend: "$590/month",
+  },
 ];
 
 export const industryCategories = [
   { name: "All", count: caseStudies.length },
   { name: "Medical", count: caseStudies.filter((c) => c.industry === "Medical").length },
   { name: "Home Services", count: caseStudies.filter((c) => c.industry === "Home Services").length },
+  { name: "Ecommerce", count: caseStudies.filter((c) => c.industry === "Ecommerce").length },
   { name: "B2B", count: caseStudies.filter((c) => c.industry === "B2B").length },
 ];

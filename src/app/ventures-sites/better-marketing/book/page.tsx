@@ -43,7 +43,7 @@ export default function BookPage() {
           <a href="/" className="block">
             <Image
               src="/images/better-marketing/LogoHeader.png"
-              alt="Better Marketing Digital"
+              alt="Better Digital Marketing"
               width={160}
               height={42}
               className="h-8 w-auto"
