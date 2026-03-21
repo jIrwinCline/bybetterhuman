@@ -89,22 +89,22 @@ export default function MentorshipPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               {
-                month: "Month 1",
+                month: "Aspect 1",
                 title: "Discovery",
                 desc: "Deep-dive discovery call. We uncover who you are, your skills, your passions, and the intersection where your unique offer lives.",
               },
               {
-                month: "Month 2",
+                month: "Aspect 2",
                 title: "Blueprint",
                 desc: "We architect your brand identity, define your offer stack, and build a comprehensive business plan tailored to your strengths.",
               },
               {
-                month: "Month 3",
+                month: "Aspect 3",
                 title: "Build",
                 desc: "Content strategy, digital presence, and launch assets. We construct the infrastructure your brand needs to go live with impact.",
               },
               {
-                month: "Month 4",
+                month: "Aspect 4",
                 title: "Launch",
                 desc: "Go to market. Active launch support, optimization, and the foundations for sustained growth beyond the program.",
               },
