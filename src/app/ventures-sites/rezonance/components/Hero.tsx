@@ -6,6 +6,16 @@ export default function Hero() {
       <div className="interference-line" style={{ top: "45%", animationDelay: "3s" }} />
       <div className="interference-line" style={{ top: "75%", animationDelay: "6s" }} />
 
+      {/* Hero background image */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="/images/rezonance/hero-blackout.jpeg"
+          alt="Phone displaying Blackout Survival article against a stormy cityscape"
+          className="w-full h-full object-cover opacity-30"
+        />
+        <div className="absolute inset-0 bg-linear-to-t from-bg-primary via-bg-primary/60 to-transparent" />
+      </div>
+
       <div className="w-full max-w-4xl flex flex-col items-center text-center z-10">
         <h1 className="font-barlow font-bold text-4xl md:text-5xl lg:text-[64px] leading-[1.1] tracking-[0.02em] text-text-primary uppercase mb-6">
           When the Grid Goes Down, Your Phone Becomes a Brick.

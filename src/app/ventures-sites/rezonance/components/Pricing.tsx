@@ -10,9 +10,17 @@ export default function Pricing() {
   return (
     <section id="pricing" className="bg-bg-primary py-20 md:py-28 px-6 flex flex-col items-center">
       <div className="w-full max-w-2xl flex flex-col items-center">
-        <h2 className="font-barlow font-bold text-2xl md:text-4xl lg:text-[48px] tracking-[0.04em] text-text-primary uppercase text-center mb-16 reveal">
+        <h2 className="font-barlow font-bold text-2xl md:text-4xl lg:text-[48px] tracking-[0.04em] text-text-primary uppercase text-center mb-10 reveal">
           ONE KIT. EVERYTHING YOU NEED.
         </h2>
+
+        <div className="w-full max-w-lg mx-auto aspect-video rounded overflow-hidden mb-12 reveal">
+          <img
+            src="/images/rezonance/kit-layout.png"
+            alt="Rezonance survival kit — phone, power bank, cable, and bag"
+            className="w-full h-full object-cover"
+          />
+        </div>
 
         <div className="w-full bg-bg-card border border-accent-brass rounded p-8 md:p-12 text-center reveal">
           <h3 className="font-barlow font-bold text-lg tracking-[0.15em] text-text-primary uppercase mb-6">

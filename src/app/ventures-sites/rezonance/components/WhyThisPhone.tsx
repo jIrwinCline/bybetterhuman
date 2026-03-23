@@ -32,8 +32,12 @@ export default function WhyThisPhone() {
             <p className="font-source text-text-primary text-lg leading-relaxed mb-8">
               {phoneNarrative}
             </p>
-            <div className="photo-placeholder w-full aspect-[4/3] rounded">
-              [PRODUCT PHOTO — XCOVER6 PRO]
+            <div className="w-full aspect-[4/3] rounded overflow-hidden">
+              <img
+                src="/images/rezonance/phone-rugged.png"
+                alt="Samsung XCover6 Pro — rugged, waterproof, dustproof"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>

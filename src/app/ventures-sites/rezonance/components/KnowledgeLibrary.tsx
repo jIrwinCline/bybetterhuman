@@ -61,9 +61,17 @@ export default function KnowledgeLibrary() {
   return (
     <section id="knowledge" className="bg-bg-secondary py-20 md:py-28 px-6 flex flex-col items-center">
       <div className="w-full max-w-4xl flex flex-col items-center">
-        <h2 className="font-barlow font-bold text-2xl md:text-4xl lg:text-[48px] tracking-[0.04em] text-text-primary uppercase text-center mb-16 reveal">
+        <h2 className="font-barlow font-bold text-2xl md:text-4xl lg:text-[48px] tracking-[0.04em] text-text-primary uppercase text-center mb-10 reveal">
           12,000 YEARS OF HUMAN KNOWLEDGE. ONE DEVICE.
         </h2>
+
+        <div className="w-full max-w-md mx-auto aspect-video rounded overflow-hidden mb-16 reveal">
+          <img
+            src="/images/rezonance/microsd-insert.png"
+            alt="Samsung 512GB MicroSD card being inserted into phone"
+            className="w-full h-full object-cover"
+          />
+        </div>
 
         <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {knowledgeCards.map((card, i) => (

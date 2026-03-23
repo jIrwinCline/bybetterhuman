@@ -49,9 +49,12 @@ export default function Solution() {
           ALL OF HUMAN KNOWLEDGE. ZERO BARS REQUIRED.
         </h2>
 
-        {/* Product hero placeholder */}
-        <div className="photo-placeholder w-full max-w-2xl mx-auto aspect-[16/9] rounded mb-16 reveal">
-          [PRODUCT PHOTO]
+        <div className="w-full max-w-2xl mx-auto aspect-[16/9] rounded overflow-hidden mb-16 reveal">
+          <img
+            src="/images/rezonance/solution-field.png"
+            alt="Hand holding Rezonance phone with offline maps in the rain"
+            className="w-full h-full object-cover"
+          />
         </div>
 
         {/* Three columns */}
