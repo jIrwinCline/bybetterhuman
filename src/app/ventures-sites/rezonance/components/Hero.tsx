@@ -37,6 +37,12 @@ export default function Hero() {
         >
           ORDER YOUR KIT — $497
         </a>
+        <a
+          href="#vsl"
+          className="inline-block font-barlow font-semibold text-sm tracking-[0.15em] uppercase text-text-secondary hover:text-text-primary border border-text-secondary/30 hover:border-text-secondary/60 px-8 py-3 rounded mt-4 no-underline transition-colors"
+        >
+          Learn More
+        </a>
       </div>
 
       {/* Chevron */}
