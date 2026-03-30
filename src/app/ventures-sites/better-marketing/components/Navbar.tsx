@@ -47,7 +47,7 @@ export default function Navbar({
           {/* Logo */}
           <a href="#" className="block">
             <Image
-              src="/images/LogoHeader.png"
+              src="/images/better-marketing/LogoHeader.png"
               alt="Better Digital Marketing"
               width={180}
               height={48}
