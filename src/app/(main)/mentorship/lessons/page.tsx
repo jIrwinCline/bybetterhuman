@@ -1,7 +1,7 @@
 import AnimatedSection from "@/components/AnimatedSection";
 import Marquee from "@/components/Marquee";
 
-interface Concept {
+interface Lesson {
   title: string;
   description: string;
   image?: string;
@@ -10,71 +10,63 @@ interface Concept {
   internal?: boolean;
 }
 
-const CONCEPTS: Concept[] = [
+const LESSONS: Lesson[] = [
   {
-    title: "Preparations 2027+",
+    title: "Niche Discovery",
     description:
-      "The Low-Tech Shield: A field intelligence briefing on surviving autonomous threats through unconventional countermeasures, economic attrition, and the art of disappearing.",
-    url: "/ventures/preparations-2027",
+      "A guided brainstorming walkthrough to help you discover a niche that could use your expertise. Map your experience, skills, and solved problems against real market needs.",
+    url: "/mentorship/lessons/niche-discovery",
     stage: "Active",
-    internal: true,
-  },
-  {
-    title: "Orbis",
-    description:
-      "A visual notes tracker where ideas, tasks, and thoughts exist as holographic orbs — AI-powered, voice-driven, and organized by spatial intuition. Grab, expand, speak, move.",
-    url: "/ventures/orbis",
-    stage: "Concept",
     internal: true,
   },
 ];
 
-function ConceptCard({ concept }: { concept: Concept }) {
+function LessonCard({ lesson }: { lesson: Lesson }) {
   return (
     <a
-      href={concept.url}
-      {...(concept.internal ? {} : { target: "_blank", rel: "noopener noreferrer" })}
+      href={lesson.url}
+      {...(lesson.internal ? {} : { target: "_blank", rel: "noopener noreferrer" })}
       className="group glass-card flex flex-col h-full overflow-hidden transition-all duration-300 hover:border-bbh-white/30 hover:bg-white/[0.08]"
     >
       {/* Image or title block */}
-      {concept.image ? (
+      {lesson.image ? (
         <div className="aspect-[4/3] overflow-hidden bg-bbh-gray-800">
           <img
-            src={concept.image}
-            alt={concept.title}
+            src={lesson.image}
+            alt={lesson.title}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           />
         </div>
       ) : (
         <div className="aspect-[4/3] bg-bbh-gray-900 flex items-center justify-center px-6 border-b border-glass-border">
           <h3 className="text-display text-2xl md:text-3xl text-center group-hover:text-bbh-red transition-colors duration-300">
-            {concept.title}
+            {lesson.title}
           </h3>
         </div>
       )}
 
       {/* Content */}
       <div className="p-5 flex flex-col flex-1">
-        {concept.image && (
+        {lesson.image && (
           <h3 className="text-display text-lg mb-2 group-hover:text-bbh-red transition-colors duration-300">
-            {concept.title}
+            {lesson.title}
           </h3>
         )}
         <div className="flex items-center gap-2 mb-3">
           <span
             className={`text-[0.55rem] uppercase tracking-widest px-2 py-0.5 ${
-              concept.stage === "Active"
+              lesson.stage === "Active"
                 ? "bg-bbh-red/20 text-bbh-red border border-bbh-red/30"
-                : concept.stage === "POC"
+                : lesson.stage === "Draft"
                   ? "bg-bbh-white/10 text-bbh-white border border-bbh-white/20"
                   : "bg-bbh-white/5 text-bbh-gray-400 border border-glass-border"
             }`}
           >
-            {concept.stage}
+            {lesson.stage}
           </span>
         </div>
         <p className="text-xs text-bbh-gray-400 leading-relaxed font-mono line-clamp-3">
-          {concept.description}
+          {lesson.description}
         </p>
         <div className="mt-auto pt-4">
           <span className="text-[0.6rem] uppercase tracking-widest text-bbh-gray-400 group-hover:text-bbh-white transition-colors">
@@ -86,7 +78,7 @@ function ConceptCard({ concept }: { concept: Concept }) {
   );
 }
 
-export default function ConceptsPage() {
+export default function LessonsPage() {
   return (
     <>
       {/* ─── HERO ─── */}
@@ -94,43 +86,53 @@ export default function ConceptsPage() {
         <div className="max-w-7xl mx-auto">
           <AnimatedSection>
             <a
-              href="/ventures"
+              href="/mentorship"
               className="text-label text-bbh-gray-400 hover:text-bbh-white transition-colors mb-4 inline-block tracking-[0.3em]"
             >
-              &larr; Ventures
+              &larr; Mentorship
             </a>
           </AnimatedSection>
           <AnimatedSection delay={0.2}>
             <h1 className="text-display text-[clamp(2.5rem,8vw,7rem)] leading-[0.85] mb-8">
-              Backlog
+              Better
               <br />
-              <span className="text-editorial">Projects</span>
+              <span className="text-editorial">Lessons</span>
             </h1>
           </AnimatedSection>
           <AnimatedSection delay={0.4}>
             <p className="text-lg md:text-xl text-bbh-gray-300 max-w-2xl leading-relaxed font-mono">
-              Early-stage ideas and proof-of-concept builds. Some will become
-              ventures. Some will stay experiments. All push the boundaries.
+              Step-by-step walkthroughs for building your brand, business, and
+              digital presence. Practical lessons you can follow at your own pace.
             </p>
           </AnimatedSection>
         </div>
       </section>
 
-      {/* ─── CONCEPTS GRID ─── */}
+      {/* ─── LESSONS GRID ─── */}
       <section className="px-6 md:px-10 pb-24 md:pb-32">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
-            {CONCEPTS.map((concept, i) => (
-              <AnimatedSection key={concept.title} delay={i * 0.07}>
-                <ConceptCard concept={concept} />
-              </AnimatedSection>
-            ))}
-          </div>
+          {LESSONS.length > 0 ? (
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
+              {LESSONS.map((lesson, i) => (
+                <AnimatedSection key={lesson.title} delay={i * 0.07}>
+                  <LessonCard lesson={lesson} />
+                </AnimatedSection>
+              ))}
+            </div>
+          ) : (
+            <AnimatedSection>
+              <div className="glass-card p-12 text-center">
+                <p className="text-bbh-gray-400 font-mono">
+                  Lessons coming soon. Check back shortly.
+                </p>
+              </div>
+            </AnimatedSection>
+          )}
         </div>
       </section>
 
       {/* ─── MARQUEE ─── */}
-      <Marquee text="BACKLOG" className="py-8" />
+      <Marquee text="LESSONS" className="py-8" />
     </>
   );
 }

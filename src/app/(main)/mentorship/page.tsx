@@ -32,6 +32,22 @@ export default function MentorshipPage() {
 
   return (
     <>
+      {/* ─── BETTER LESSONS BUTTON ─── */}
+      <section className="pt-24 md:pt-32 px-6 md:px-10">
+        <div className="max-w-7xl mx-auto">
+          <AnimatedSection>
+            <a
+              href="/mentorship/lessons"
+              className="group block w-full py-5 border border-glass-border-strong text-center transition-all duration-300 hover:bg-white/5 hover:border-bbh-white/30"
+            >
+              <span className="text-label text-bbh-gray-400 group-hover:text-bbh-white transition-colors tracking-[0.3em]">
+                Better Lesson Assets &rarr;
+              </span>
+            </a>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* ─── HERO ─── */}
       <section className="py-32 md:py-44 px-6 md:px-1 hero-bg">
         <div className="max-w-7xl mx-auto">
